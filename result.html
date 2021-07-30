@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rosenta-Multil label Classifier</title>
+
+	<!--Latest compiled and minified CSS -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Customizing stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/static/css/result.css">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<!-- Icon Support -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<!-- Mobile Site functionality -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+	<!-- Jquery Link -->
+	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Navbar Design  -->
+	<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+		<div class="container">
+      <a class="navbar-brand" href="index.html">SPIARE <i class="fas fa-flower"></i></a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse" id="navbarsExample04" style="">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/">Home <i class="fas fa-home"></i> </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/what">What Is It?</a>
+          </li>
+
+        </ul>
+        
+        <!-- Right side elements -->
+        <ul class="navbar-nav ml-auto"> 
+          <li class="nav-item">
+          	<a class="nav-link" href="#">Our Team <i class="fas fa-user-tie"></i></a>
+          </li>
+      </ul>
+      </div>
+      </div>
+    </nav>
+
+
+
+<!--  Table 2-->
+<div class="table">
+  
+  <div class="table-cell plattform">
+    <h3>Result</h3>
+  </div>
+  <div class="table-cell enterprise">
+    <h3>Probability (It belongs to Class)</h3>
+  </div>
+  <div class="table-cell enterprise" style="    font-size: 2.0rem;">What Class Signify </div>
+
+  <div class="table-cell">Toxic</div>
+  <div class="table-cell">{{ value1 }}  with Probability: {{ pred1 }}</div>
+  <div class="table-cell cell-feature">Toxic Content in Comment</div>
+
+  <div class="table-cell">Severe Toxic</div>
+  <div class="table-cell">{{ value2 }} with Probability: {{ pred2 }}</div>
+  <div class="table-cell cell-feature">Severely Toxic Content in Comment</div>
+
+   <div class="table-cell">Obscene</div>
+  <div class="table-cell">{{ value3 }} with Probability: {{ pred3 }}
+  </div>
+  <div class="table-cell cell-feature">Obscene Content in Comment</div>
+
+   <div class="table-cell">Threat</div>
+  <div class="table-cell">{{ value4 }} with Probability: {{ pred4 }}
+  </div>
+  <div class="table-cell cell-feature">Threat in Comment</div>
+
+   <div class="table-cell">Insult</div>
+  <div class="table-cell">{{ value5 }} with Probability: {{ pred5 }}
+  </div>
+  <div class="table-cell cell-feature">Insult in Comment</div>
+
+   <div class="table-cell">Identity-hate</div>
+  <div class="table-cell">{{ value6 }} with Probability: {{ pred6 }}
+  </div>
+  <div class="table-cell cell-feature">Identity Hate in Comment</div>
+ 
+ 
+
+</div>
+<!-- Table 2 end -->
+
+
+
+</body>
+</html>
+
+	
+
