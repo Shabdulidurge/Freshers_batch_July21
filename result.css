@@ -1,0 +1,357 @@
+#special{
+	padding-top: 7%;
+	
+}
+.table{
+	background: white;
+}
+body{
+
+	border: 15px solid #b31c16;
+	margin-left: 8%;
+	margin-right:8% ;
+	margin-top: 2%;
+	padding:20px;
+	/*You can also use width
+	and max width,it switches 
+	max-width:700px;
+	width:80%
+	After it cant be 700 px it changes to width value;*/
+	font-family: Lato;
+	background: #52004a;
+    color: #9defe8;
+    font-size: 1.0rem;
+	}
+	html
+{
+	background: url("https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+
+h2{
+	font-weight: 700;
+    font-size: 2.5rem;
+    
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #efeded;
+    background-image: linear-gradient(to right, #ccc, #ecb8b8, #ccc);
+    width: 75%;
+}
+.image1 {
+  background-image: url(conf.jpg);
+}
+
+.image2 {
+  background-image: url(https://images.unsplash.com/photo-1465405092061-4db6005a2be0?dpr=2&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=);
+}
+
+.image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+.textcontainer
+{
+	font-size: 1.5em;
+    text-align: justify;
+    padding-top: 3%;
+}
+#adoc{
+	color: white;
+}
+
+/*Table styling*/
+$baseColor: #398B93;
+$borderRadius: 10px;
+$imageBig: 100px;
+$imageSmall: 60px;
+$padding: 10px;
+
+body {
+   background-color: lighten($baseColor, 30%);
+   * { box-sizing: border-box; }
+}
+
+.header {
+   background-color: darken($baseColor, 5%);
+   color: white;
+   font-size: 1.5em;
+   padding: 1rem;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+img {
+   border-radius: 50%;
+   height: $imageSmall;
+   width: $imageSmall;
+}
+
+.table-users {
+   border: 1px solid darken($baseColor, 5%);
+   border-radius: $borderRadius;
+   box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+   max-width: calc(100% - 2em);
+   margin: 1em auto;
+   overflow: hidden;
+   width: 800px;
+}
+
+table {
+   width: 100%;
+   
+   td, th { 
+      color: darken($baseColor, 10%);
+      padding: $padding; 
+   }
+   
+   td {
+      text-align: center;
+      vertical-align: middle;
+      
+      &:last-child {
+         font-size: 0.95em;
+         line-height: 1.4;
+         text-align: left;
+      }
+   }
+   
+   th { 
+      background-color: lighten($baseColor, 50%);
+      font-weight: 300;
+   }
+   
+   tr {     
+      &:nth-child(2n) { background-color: white; }
+      &:nth-child(2n+1) { background-color: lighten($baseColor, 55%) }
+   }
+}
+
+@media screen and (max-width: 700px) {   
+   table, tr, td { display: block; }
+   
+   td {
+      &:first-child {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         width: $imageBig;
+      }
+
+      &:not(:first-child) {
+         clear: both;
+         margin-left: $imageBig;
+         padding: 4px 20px 4px 90px;
+         position: relative;
+         text-align: left;
+
+         &:before {
+            color: lighten($baseColor, 30%);
+            content: '';
+            display: block;
+            left: 0;
+            position: absolute;
+         }
+      }
+
+      &:nth-child(2):before { content: 'Name:'; }
+      &:nth-child(3):before { content: 'Email:'; }
+      &:nth-child(4):before { content: 'Phone:'; }
+      &:nth-child(5):before { content: 'Comments:'; }
+   }
+   
+   tr {
+      padding: $padding 0;
+      position: relative;
+      &:first-child { display: none; }
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .header {
+      background-color: transparent;
+      color: lighten($baseColor, 60%);
+      font-size: 2em;
+      font-weight: 700;
+      padding: 0;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+   }
+   
+   img {
+      border: 3px solid;
+      border-color: lighten($baseColor, 50%);
+      height: $imageBig;
+      margin: 0.5rem 0;
+      width: $imageBig;
+   }
+   
+   td {
+      &:first-child { 
+         background-color: lighten($baseColor, 45%); 
+         border-bottom: 1px solid lighten($baseColor, 30%);
+         border-radius: $borderRadius $borderRadius 0 0;
+         position: relative;   
+         top: 0;
+         transform: translateY(0);
+         width: 100%;
+      }
+      
+      &:not(:first-child) {
+         margin: 0;
+         padding: 5px 1em;
+         width: 100%;
+         
+         &:before {
+            font-size: .8em;
+            padding-top: 0.3em;
+            position: relative;
+         }
+      }
+      
+      &:last-child  { padding-bottom: 1rem !important; }
+   }
+   
+   tr {
+      background-color: white !important;
+      border: 1px solid lighten($baseColor, 20%);
+      border-radius: $borderRadius;
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+      margin: 0.5rem 0;
+      padding: 0;
+   }
+   
+   .table-users { 
+      border: none; 
+      box-shadow: none;
+      overflow: visible;
+   }
+}
+
+/*Table 2 style*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+body {
+  color: slategray;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2rem 0rem 0rem 0rem;
+  max-width: 1100px;
+}
+
+.table-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style-type: none;
+  outline: 1px solid #ddd;
+  text-align: center;
+  font-weight: 300;
+  margin: {
+    top: 1px;
+    left: 1px;
+  }
+  &:first-child {
+  	outline: 1px solid #fff;
+    background: transparent;
+  	@media only screen and (max-width : 768px) {
+			display: none;
+		}
+  }
+  &:nth-child(3) {
+    outline: 1px solid #30305b;
+  }
+  &:nth-child(-n+3) {
+  	padding: {
+  		top: 40px;
+  		bottom: 40px;
+  	}
+  }
+  > h3 {
+    font-size: 26px;
+  	margin: {
+  		top: 0;
+  		bottom: 3rem;
+  	}
+  }
+  &.cell-feature {
+	  text-align: left;
+    font-size: 18px;
+  }
+  &.plattform {
+    color: limegreen;
+    a.btn {
+      color: limegreen;
+      &:hover {
+        background-color: limegreen;
+        border-color: limegreen;
+        color: white;
+      }
+    }
+  }
+  &.enterprise {
+    background-color: #30305b;
+    color: #85bafc;
+    a.btn {
+      color: #85bafc;
+      &:hover {
+        background-color: #85bafc;
+        border-color: #85bafc;
+        color: #30305b;
+      }
+    }
+  }
+}
+
+/* Table columns
+================================== */
+.table-cell  {
+  width: calc(33.33% - 1px);
+  &.cell-feature {
+	  @media only screen and (max-width : 768px) {
+		  width: 100%;
+		  text-align: center;
+	  }
+  }
+}
+
+svg.enterprise-check path {
+  fill: #30305b !important;
+}
+
+a.btn {
+  border: 2px solid;
+  padding: .6rem .9rem .6rem .9rem;
+  font-weight: 400;
+  text: {
+    transform: uppercase;
+    decoration: none;
+  }
+  @include transition(0.2s ease-in-out);
+  @include border-radius(.3rem);
+}
