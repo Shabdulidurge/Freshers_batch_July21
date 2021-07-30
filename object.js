@@ -8,7 +8,7 @@
 <script>
 // Create an object:
 const person = {
-  firstName: "John",
+  firstName: "Johson",
   lastName: "Doe",
   age: 50,
   eyeColor: "blue"
